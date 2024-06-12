@@ -11,6 +11,8 @@
 		74A4192F2C199B8800844F84 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4192E2C199B8800844F84 /* ContentView.swift */; };
 		74A419312C199B8A00844F84 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74A419302C199B8A00844F84 /* Assets.xcassets */; };
 		74A419342C199B8A00844F84 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 74A419332C199B8A00844F84 /* Preview Assets.xcassets */; };
+		74A4193C2C199C1B00844F84 /* PubConsent in Frameworks */ = {isa = PBXBuildFile; productRef = 74A4193B2C199C1B00844F84 /* PubConsent */; };
+		74A4193E2C199C6A00844F84 /* PubConsentWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74A4193D2C199C6A00844F84 /* PubConsentWrapper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,8 @@
 		74A4192E2C199B8800844F84 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		74A419302C199B8A00844F84 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		74A419332C199B8A00844F84 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		74A4193D2C199C6A00844F84 /* PubConsentWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PubConsentWrapper.swift; sourceTree = "<group>"; };
+		74A4193F2C199F8800844F84 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -26,6 +30,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A4193C2C199C1B00844F84 /* PubConsent in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -35,6 +40,7 @@
 		74A419202C199B8800844F84 = {
 			isa = PBXGroup;
 			children = (
+				74A4193F2C199F8800844F84 /* README.md */,
 				74A4192B2C199B8800844F84 /* pubconsent-ios-example */,
 				74A4192A2C199B8800844F84 /* Products */,
 			);
@@ -51,6 +57,7 @@
 		74A4192B2C199B8800844F84 /* pubconsent-ios-example */ = {
 			isa = PBXGroup;
 			children = (
+				74A4193D2C199C6A00844F84 /* PubConsentWrapper.swift */,
 				74A4192C2C199B8800844F84 /* pubconsent_ios_exampleApp.swift */,
 				74A4192E2C199B8800844F84 /* ContentView.swift */,
 				74A419302C199B8A00844F84 /* Assets.xcassets */,
@@ -83,6 +90,9 @@
 			dependencies = (
 			);
 			name = "pubconsent-ios-example";
+			packageProductDependencies = (
+				74A4193B2C199C1B00844F84 /* PubConsent */,
+			);
 			productName = "pubconsent-ios-example";
 			productReference = 74A419292C199B8800844F84 /* pubconsent-ios-example.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +121,9 @@
 				Base,
 			);
 			mainGroup = 74A419202C199B8800844F84;
+			packageReferences = (
+				74A4193A2C199C1B00844F84 /* XCRemoteSwiftPackageReference "pubconsent-sdk-apple-os-spm" */,
+			);
 			productRefGroup = 74A4192A2C199B8800844F84 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -137,6 +150,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				74A4193E2C199C6A00844F84 /* PubConsentWrapper.swift in Sources */,
 				74A4192F2C199B8800844F84 /* ContentView.swift in Sources */,
 				74A4192D2C199B8800844F84 /* pubconsent_ios_exampleApp.swift in Sources */,
 			);
@@ -342,6 +356,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		74A4193A2C199C1B00844F84 /* XCRemoteSwiftPackageReference "pubconsent-sdk-apple-os-spm" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pubtech-ai/pubconsent-sdk-apple-os-spm";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		74A4193B2C199C1B00844F84 /* PubConsent */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 74A4193A2C199C1B00844F84 /* XCRemoteSwiftPackageReference "pubconsent-sdk-apple-os-spm" */;
+			productName = PubConsent;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 74A419212C199B8800844F84 /* Project object */;
 }
