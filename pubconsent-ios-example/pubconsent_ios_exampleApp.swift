@@ -30,10 +30,11 @@ class OpenUIHandler: OnOpenUICallback {
 class GoogleConsentModeHandler: OnGoogleConsentModeCallback {
     func update(googleConsentModeMap: [GoogleConsentModeType: GoogleConsentModeStatus]) {
         print("Google consent mode updated:")
-        for (type, status) in googleConsentModeMap {
-            print("Type: \(type), Status: \(status)")
-        }
-        // Additional code to handle Google consent mode updates
+        
+        print("Status ad_personalization: \(googleConsentModeMap[GoogleConsentModeType.ad_personalization] == GoogleConsentModeStatus.granted)")
+        print("Status ad_storage: \(googleConsentModeMap[GoogleConsentModeType.ad_storage] == GoogleConsentModeStatus.granted)")
+        print("Status ad_user_data: \(googleConsentModeMap[GoogleConsentModeType.ad_user_data] == GoogleConsentModeStatus.granted)")
+        print("Status analytics_storage: \(googleConsentModeMap[GoogleConsentModeType.analytics_storage] == GoogleConsentModeStatus.granted)")
     }
 }
 
