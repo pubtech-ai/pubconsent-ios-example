@@ -37,13 +37,6 @@ struct ContentView: View {
                         .padding()
                         .background(Color.purple)
                         .cornerRadius(8)
-                    Button("Print Info") {
-                        print("Google vendor is enabled? \(PubConsentCMP.shared.isVendorConsentEnabled(vendorId: 755))")
-                    }.foregroundColor(.white)
-                        .padding()
-                        .cornerRadius(40)
-                        .background(Color.purple)
-                        .cornerRadius(8)
                 }
                 .padding(.top, 100)
                 .background {

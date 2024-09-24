@@ -9,8 +9,20 @@ import SwiftUI
 import PubConsent
 
 class ConsentReadyHandler: OnConsentReadyCallback {
-    func onConsentReady() {
-        print("Consent is ready.")
+    func onConsentReady(consentApiInstance: any PubConsent.ConsentApiInterface) {
+        if (consentApiInstance.getCmpType() == CmpType.TCF_V2_GDPR) {
+            if let apiInstance = consentApiInstance as? TCFGDPRConsentApi {
+                print("Google Consent Status \(apiInstance.isVendorConsentEnabled(vendorId: 755))")
+                print("Google Consent Mode ad_personalization granted? \(apiInstance.getGoogleConsentMode()[GoogleConsentModeType.ad_personalization] == .granted)")
+            } else {
+                print("Contact Pubtech since there is some unexpected problem (This can't happen but it's better to track every exception.")
+            }
+        }
+        if (consentApiInstance.getCmpType() == CmpType.GOOGLE_CONSENT_MODE) {
+            if let apiInstance = consentApiInstance as? GCMConsentApi {
+                print("Google Consent Mode ad_personalization granted? \(apiInstance.getGoogleConsentMode()[GoogleConsentModeType.ad_personalization] == .granted)")
+            }
+        }
     }
 }
 
