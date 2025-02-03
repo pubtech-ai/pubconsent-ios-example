@@ -363,7 +363,7 @@
 			repositoryURL = "https://github.com/pubtech-ai/pubconsent-sdk-apple-os-spm";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 2.0.0;
+				minimumVersion = 3.0.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

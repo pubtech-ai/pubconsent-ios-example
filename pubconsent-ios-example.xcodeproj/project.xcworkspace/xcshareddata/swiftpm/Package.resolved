@@ -6,8 +6,8 @@
       "kind" : "remoteSourceControl",
       "location" : "https://github.com/pubtech-ai/pubconsent-sdk-apple-os-spm",
       "state" : {
-        "revision" : "f8abdbd501ef624a5e14ce65ec858935c3abd141",
-        "version" : "2.0.0"
+        "revision" : "be735dd704bc00ee6e6cd7481022936036535232",
+        "version" : "3.0.0"
       }
     }
   ],

@@ -32,7 +32,7 @@ struct ContentView: View {
                     Text("Demo Actions:").font(.headline)
                     
                     Button("Open CMP") {
-                        PubConsentCMP.shared.openCmp()
+                        PubConsentCMP.shared.showNotice()
                     }.foregroundColor(.white)
                         .padding()
                         .background(Color.purple)
